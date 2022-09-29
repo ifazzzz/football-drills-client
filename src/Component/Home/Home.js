@@ -3,6 +3,7 @@ import Activities from '../Activities/Activities';
 import Details from '../Details/Details';
 import Time from '../Time/Time';
 import { addToDb } from '../Utilities/Fakedb';
+
 const Home = () => {
     
     const [activities, setActivities] = useState([])
@@ -39,8 +40,8 @@ const Home = () => {
     return (
         <div className="container mx-auto mt-20">
             <h1 className="my-12 text-3xl font-bold font-sans text-slate-700">FOOTBALL DRILLS CLUB</h1>
-          <div className="grid grid-cols-4 gap-4">
-            <div className="col-span-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="col-span-1 lg:col-span-3">
 
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
                 {

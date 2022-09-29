@@ -1,11 +1,15 @@
 import React from 'react';
-
+import { toast } from 'react-toastify';
 const Time = (props) => {
     const {seconds} = props;
 
     let secondsTaken = 0;
     for(const second of seconds) {
          secondsTaken = secondsTaken + second.time;
+    }
+
+    const showToastMessage = () => {
+        toast.success('Your Drills Are Completed !')
     }
 
     return (
@@ -19,7 +23,8 @@ const Time = (props) => {
             </div>
 
             <div className="my-6">
-                <button className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Activity Completed</button>
+                <button onClick={showToastMessage} className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Activity Completed</button>
+    
             </div>
         </div>
     );

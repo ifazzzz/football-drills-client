@@ -30,11 +30,11 @@ const Details = ({setBreak, breakTime}) => {
             <div className='mt-8'>
                 <h1>Add a break</h1>
                 <div className="bg-slate-200 rounded-lg p-6 flex justify-between mt-4">
-                    <button className="bg-slate-700 rounded-full text-white p-2"><span onClick={setBreak} >10</span>s</button>
-                    <button className="bg-slate-700 rounded-full text-white p-2"><span onClick={setBreak} >20</span>s</button>
-                    <button className="bg-slate-700 rounded-full text-white p-2"><span onClick={setBreak} >30</span>s</button>
-                    <button className="bg-slate-700 rounded-full text-white p-2"><span onClick={setBreak} >40</span>s</button>
-                    <button className="bg-slate-700 rounded-full text-white p-2"><span onClick={setBreak} >50</span>s</button>  
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} className="text-center">10</span>s</button>
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >20</span>s</button>
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >30</span>s</button>
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >40</span>s</button>
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >50</span>s</button>  
                 </div>
                 <div className="bg-slate-100 rounded-lg text-sm text-slate-600 flex justify-between p-4 my-4">
                     <div>Break Time</div>
