@@ -14,16 +14,18 @@ const Home = () => {
 
     return (
         <div className="container mx-auto mt-20">
-            <h1 className="text-2xl font-bold font-sans text-blue-500">FOOTBALL DRILLS CLUB</h1>
-          <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8">
+            <h1 className="my-12 text-3xl font-bold font-sans text-slate-700">FOOTBALL DRILLS CLUB</h1>
+          <div className="grid grid-cols-4 gap-8">
             <div className="col-span-3">
 
+                <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
                 {
                     activities.map(activity => <Activities 
                         key ={activity.id}
                         contents={activity}
                         ></Activities>)
                 }
+                </div>
             </div>
             <div className="">
                 details
