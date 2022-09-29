@@ -1,5 +1,5 @@
 import React from 'react';
-import './Activities.css'
+
 const Activities = ({contents}) => {
     const {title , image, description, time} = contents
     return (

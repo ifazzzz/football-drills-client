@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Activities from '../Activities/Activities';
+import Deatils from '../Details/Details';
 const Home = () => {
 
     const [activities, setActivities] = useState([])
@@ -15,7 +16,7 @@ const Home = () => {
     return (
         <div className="container mx-auto mt-20">
             <h1 className="my-12 text-3xl font-bold font-sans text-slate-700">FOOTBALL DRILLS CLUB</h1>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-4 gap-4">
             <div className="col-span-3">
 
                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
@@ -27,8 +28,8 @@ const Home = () => {
                 }
                 </div>
             </div>
-            <div className="">
-                details
+            <div className="bg-white rounded-lg">
+                <Deatils></Deatils>
             </div>  
           </div>
         </div>
