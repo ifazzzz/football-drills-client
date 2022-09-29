@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Activities from '../Activities/Activities';
-import Deatils from '../Details/Details';
+import Details from '../Details/Details';
+import Time from '../Time/Time';
 const Home = () => {
-
+    
     const [activities, setActivities] = useState([])
     const [seconds, setSeconds] = useState([])
+    const [breakTime, setBreakTime] = useState()
 
     useEffect(() =>{
 
@@ -17,6 +19,10 @@ const Home = () => {
     const addTime = (activities) => {
         const newArray = [...seconds, activities]
         setSeconds(newArray);
+    }
+    
+    const addBreak = (e) => {
+        setBreakTime(e.target.innerText);
     }
 
     return (
@@ -35,8 +41,10 @@ const Home = () => {
                 }
                 </div>
             </div>
+            
             <div className="bg-white rounded-lg">
-                <Deatils seconds={seconds}></Deatils>
+                <Details setBreak={addBreak} breakTime={breakTime}></Details>
+                <Time seconds={seconds}></Time>
             </div>  
           </div>
         </div>
