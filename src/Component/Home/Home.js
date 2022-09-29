@@ -4,6 +4,7 @@ import Deatils from '../Details/Details';
 const Home = () => {
 
     const [activities, setActivities] = useState([])
+    const [seconds, setSeconds] = useState([])
 
     useEffect(() =>{
 
@@ -12,6 +13,11 @@ const Home = () => {
         .then(data => setActivities(data))
 
     }, [])
+    
+    const addTime = (activities) => {
+        const newArray = [...seconds, activities]
+        setSeconds(newArray);
+    }
 
     return (
         <div className="container mx-auto mt-20">
@@ -24,12 +30,13 @@ const Home = () => {
                     activities.map(activity => <Activities 
                         key ={activity.id}
                         contents={activity}
+                        seconds = {addTime}
                         ></Activities>)
                 }
                 </div>
             </div>
             <div className="bg-white rounded-lg">
-                <Deatils></Deatils>
+                <Deatils seconds={seconds}></Deatils>
             </div>  
           </div>
         </div>

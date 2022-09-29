@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Deatils = () => {
+const Deatils = (props) => {
+    const {seconds} = props;
+    console.log(seconds);
+
+    let secondsTaken = 0;
+    for(const second of seconds) {
+         secondsTaken = secondsTaken + second.time;
+    }
+
     return (
         <div className="p-6">
             <div className="flex p-4 justify-evenly">
@@ -34,7 +42,7 @@ const Deatils = () => {
               <p className="text-base text-bold">Exercise Details</p>
               <div className="bg-slate-100 rounded-lg text-sm text-slate-600 flex justify-between p-4 my-4">
                 <div>Exercise Time</div>
-                <div>Seconds</div>
+                <div>{secondsTaken} Seconds</div>
               </div>
             </div>
 
