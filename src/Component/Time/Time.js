@@ -2,7 +2,6 @@ import React from 'react';
 
 const Time = (props) => {
     const {seconds} = props;
-    console.log(seconds);
 
     let secondsTaken = 0;
     for(const second of seconds) {

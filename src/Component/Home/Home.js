@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Activities from '../Activities/Activities';
 import Details from '../Details/Details';
 import Time from '../Time/Time';
+import { addToDb } from '../Utilities/Fakedb';
 const Home = () => {
     
     const [activities, setActivities] = useState([])
@@ -16,6 +17,15 @@ const Home = () => {
 
     }, [])
     
+    useEffect(() =>{
+
+        const addedTime = localStorage.getItem('breakTime')
+        const choosenTime = JSON.parse(addedTime)
+        if(choosenTime){
+            setBreakTime(choosenTime)
+        }
+    }, [breakTime])
+
     const addTime = (activities) => {
         const newArray = [...seconds, activities]
         setSeconds(newArray);
@@ -23,6 +33,7 @@ const Home = () => {
     
     const addBreak = (e) => {
         setBreakTime(e.target.innerText);
+        addToDb(e.target.innerText)
     }
 
     return (
