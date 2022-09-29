@@ -3,7 +3,7 @@ import React from 'react';
 const Details = ({setBreak, breakTime}) => {
 
     return (
-        <div className="p-6">
+        <div className="p-6 mt-16">
             <div className="flex p-4 justify-evenly">
                 <div>
                     <img className="rounded-full w-16" src="https://12r9bkcquoz2cfikc47m7moj-wpengine.netdna-ssl.com/wp-content/uploads/2022/02/Oli-Billson.jpeg" alt="" />
@@ -30,7 +30,7 @@ const Details = ({setBreak, breakTime}) => {
             <div className='mt-8'>
                 <h1>Add a break</h1>
                 <div className="bg-slate-200 rounded-lg p-6 flex justify-between mt-4">
-                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} className="text-center">10</span>s</button>
+                    <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >10</span>s</button>
                     <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >20</span>s</button>
                     <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >30</span>s</button>
                     <button className="bg-slate-700 rounded-full text-white p-2 w-1/6"><span onClick={setBreak} >40</span>s</button>
