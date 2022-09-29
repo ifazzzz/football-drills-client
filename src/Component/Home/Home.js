@@ -38,8 +38,12 @@ const Home = () => {
     }
 
     return (
-        <div className="container mx-auto mt-20">
-            <h1 className="my-12 text-3xl font-bold font-sans text-slate-700">FOOTBALL DRILLS CLUB</h1>
+        <div className="container mx-auto mt-20 font-sans">
+            <div className="flex align-center justify-start my-12">
+                <img src="https://www.nbcsports.com/sites/rsnunited/files/archive/assets_media_gallery/philadelphia/2020/07/01/houston-texans-symbol_1_0.jpg" alt="" className="w-12 h-12 rounded-full" />
+                <h1 className="mx-4 text-3xl font-bold font-sans text-slate-700">FOOTBALL DRILLS CLUB</h1>
+            </div>
+            
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="col-span-1 lg:col-span-3">
 

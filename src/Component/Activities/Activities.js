@@ -1,7 +1,7 @@
 import React from 'react';
-// {contents, time}
-const Activities = (props) => {
-    const {title, time, image, description} = props.contents
+
+const Activities = ({contents, seconds}) => {
+    const {title, time, image, description} = contents
     return (
         <div className="border border-transparent rounded-lg p-4 bg-white">
             <img className="w-96 h-40 rounded-lg" src={image} alt="" />
@@ -11,7 +11,7 @@ const Activities = (props) => {
                 <h1 className="text-base font-bold font-sans my-2">Time Required :{time}s</h1>
             </div>
             <div className="mt-4">
-                <button onClick={() => props.seconds(props.contents)} className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Add to list</button>
+                <button onClick={() => seconds(contents)} className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Add to list</button>
             </div>
         </div>
     );

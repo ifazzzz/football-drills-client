@@ -1,6 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 const Time = (props) => {
+
     const {seconds} = props;
 
     let secondsTaken = 0;
@@ -13,6 +14,7 @@ const Time = (props) => {
     }
 
     return (
+        
         <div className="p-6">
            <div>
               <p className="text-base text-bold">Exercise Details</p>
@@ -23,8 +25,7 @@ const Time = (props) => {
             </div>
 
             <div className="my-6">
-                <button onClick={showToastMessage} className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Activity Completed</button>
-    
+                <button onClick={showToastMessage} className="w-full bg-slate-700 px-6 py-3 rounded-lg text-white">Activity Completed</button>   
             </div>
         </div>
     );
